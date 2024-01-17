@@ -3,7 +3,7 @@ import HeroBanner from './heroBanner/HeroBanner';
 
 const Home = () => {
   return (
-    <div>
+    <div className='homepage'>
       <HeroBanner />
     </div>
   )
