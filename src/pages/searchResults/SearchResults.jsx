@@ -27,7 +27,6 @@ const SearchResults = () => {
       setData(res);
       setPageNum((prev)=> prev + 1)
       setLoading(false)
-      console.log(data);
     })
   }
   
