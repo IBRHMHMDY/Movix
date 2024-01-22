@@ -12,8 +12,11 @@ import CircleRating from "../../../components/circleRating/CircleRating";
 import ImgLazyLoad from "../../../components/LazyloadImages/ImgLazyLoad";
 import PosterFallback from "../../../assets/no-poster.png";
 import { PlayIcon } from "../../../components/playIcon/PlayIcon";
+import VideoPopup from "../../../components/videoPopup/VideoPopup";
 
 const DetailsBanner = ({ video, crew }) => {
+    const [show, setShow] = useState(false);
+    const [videoId, setVideoId] = useState(null)
     const {mediaType, id} = useParams();
     const { data, loading } = useFetch(`/${mediaType}/${id}`);
     const {url} = useSelector((state)=> state.home);
@@ -64,7 +67,10 @@ const DetailsBanner = ({ video, crew }) => {
                                             <Genres data={_genres} />
                                             <div className="row">
                                                 <CircleRating rating={data.vote_average.toFixed(1)} />
-                                                <div className="playbtn">
+                                                <div className="playbtn" onClick={()=> {
+                                                    setShow(true);
+                                                    setVideoId(video.key)
+                                                }}>
                                                     <PlayIcon />
                                                     <div className="text">
                                                         Watch Trailer
@@ -150,6 +156,10 @@ const DetailsBanner = ({ video, crew }) => {
                                             )}
                                         </div>
                                     </div>
+                                    <VideoPopup show={show}
+                                    setShow={setShow}
+                                    videoId={videoId}
+                                    setVideoId={setVideoId} />
                                 </ContentWrapper>
                             </React.Fragment>
                         )
