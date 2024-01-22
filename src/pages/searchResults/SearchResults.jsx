@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import fetchDataFromApi from '../../utils/api';
-import useFetch from '../../hooks/useFetch';
+import useFetch from '../../hooks/UseFetch';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import ContentWrapper from '../../components/contentWrapper/ContentWrapper';
 import noResult from '../../assets/no-results.png';

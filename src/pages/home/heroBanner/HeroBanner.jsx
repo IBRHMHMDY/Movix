@@ -2,7 +2,7 @@ import "./style.scss";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import useFetch from "../../../hooks/useFetch";
+import useFetch from "../../../hooks/UseFetch";
 import ImgLazyLoad from "../../../components/LazyloadImages/ImgLazyLoad";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 
