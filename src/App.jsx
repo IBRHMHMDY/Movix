@@ -11,8 +11,8 @@ import Details from './pages/details/Details';
 import SearchResults from './pages/searchResults/SearchResults';
 import Explore from './pages/explore/Explore';
 import PageNotFound from './pages/404/PageNotFound';
-import Header from './components/Header/header';
-import Footer from './components/Footer/footer';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 function App() {
   const {url} = useSelector((state)=> state.home);
