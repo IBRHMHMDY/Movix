@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Home from './pages/home/home';
+import Home from './pages/home/Home';
 import Details from './pages/details/Details';
 import SearchResults from './pages/searchResults/SearchResults';
 import Explore from './pages/explore/Explore';
