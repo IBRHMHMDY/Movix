@@ -28,7 +28,11 @@ const Videos = ({ data, loading }) => {
                 {!loading ? (
                     <div className="videos">
                         {data?.results?.map((video)=>(
-                            <div key={video.key} className="videoItem">
+                            <div key={video.id} className="videoItem"
+                            onClick={()=> {
+                                setShow(true)
+                                setVideoId(video.key)
+                            }}>
                                 <div className="videoThumbnail">
                                     <Img src={`https://img.youtube.com/vi/${video.key}/mqdefault.jpg`}/>
                                     <PlayIcon />

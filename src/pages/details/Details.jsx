@@ -4,6 +4,8 @@ import DetailsBanner from './detailsBanner/DetailsBanner';
 import useFetch from '../../hooks/useFetch';
 import Cast from './cast/Cast';
 import Videos from './videos/Videos';
+import Similar from './carousel/similar';
+import Recommendation from './carousel/Recommendation';
 
 const Details = () => {
   const {mediaType, id} = useParams();
@@ -15,6 +17,9 @@ const Details = () => {
       <DetailsBanner video={data?.results?.[0]} crew={credits?.crew}/>
       <Cast data={credits?.cast} loading={creditsLoading} />
       <Videos data={data} loading={loading} />
+      <Similar mediaType={mediaType} id={id}/>
+       {/* Recommendations Not Working from API */}
+      {/* <Recommendation mediaType={mediaType} id={id}/> */}
     </div>
   )
 }

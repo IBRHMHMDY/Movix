@@ -3,14 +3,14 @@ import { BsFillArrowLeftCircleFill,BsFillArrowRightCircleFill } from "react-icon
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
-import ImgLazyLoad from "../LazyloadImages/imgLazyLoad";
+import ImgLazyLoad from "../LazyloadImages/ImgLazyLoad";
 import CircleRating from "../circleRating/CircleRating";
 import Genres from "../genres/Genres";
 import dayjs from "dayjs";
 import PosterFallback from "../../assets/no-poster.png";
 import "./style.scss";
 
-const Carousel = ({ data, loading, endpoint }) => {
+const Carousel = ({ data, loading, endpoint, title }) => {
     const carouselContainer = useRef()
     const {url} = useSelector((state)=> state.home);
     const navigate = useNavigate();
@@ -43,6 +43,7 @@ const Carousel = ({ data, loading, endpoint }) => {
     return (
         <div className="carousel">
             <ContentWrapper>
+                {title && <div className="carouselTitle">{title}</div>}
                 <BsFillArrowLeftCircleFill
                 fill="white"
                 className="carouselLeftNav arrow"
