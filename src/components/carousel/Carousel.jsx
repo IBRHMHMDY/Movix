@@ -45,10 +45,12 @@ const Carousel = ({ data, loading }) => {
         <div className="carousel">
             <ContentWrapper>
                 <BsFillArrowLeftCircleFill
+                fill="white"
                 className="carouselLeftNav arrow"
                 onClick={()=> navigation("left")}/>
                 <BsFillArrowRightCircleFill
-                className="carouselRighttNav arrow"
+                fill="white"
+                className="carouselRightNav arrow"
                 onClick={()=> navigation("right")}/>
                 {!loading ? (
                     <div className="carouselItems" ref={carouselContainer}>
@@ -59,7 +61,8 @@ const Carousel = ({ data, loading }) => {
                                 : PosterFallback;
                                 return(
                                     <div key={item.id} 
-                                        className="carouselItem">
+                                        className="carouselItem" 
+                                        onClick={()=> navigate(`/${item.media_type}/${item.id}`)}>
                                         <div className="posterBlock">
                                             <ImgLazyLoad src={posterUrl} alt/>
                                             <CircleRating rating={item.vote_average.toFixed(1)}/>
