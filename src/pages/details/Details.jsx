@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom';
-
 import DetailsBanner from './detailsBanner/DetailsBanner';
 import useFetch from '../../hooks/useFetch';
 import Cast from './cast/Cast';
 import Videos from './videos/Videos';
 import Similar from './carousel/similar';
+{/* Recommendations Not Working from API */}
 import Recommendation from './carousel/Recommendation';
 
 const Details = () => {
