@@ -9,8 +9,10 @@ import {
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+    const yearNow = new Date().getFullYear()
     return (
         <footer className="footer">
             <ContentWrapper>
@@ -34,6 +36,11 @@ const Footer = () => {
                     <span className="icon">
                         <FaLinkedin />
                     </span>
+                </div>
+            </ContentWrapper>
+            <ContentWrapper>
+                <div className="copyright">
+                    Made By Ibrahim Hamdy &copy; {yearNow}
                 </div>
             </ContentWrapper>
         </footer>
