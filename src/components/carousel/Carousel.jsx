@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 import PosterFallback from "../../assets/no-poster.png";
 import "./style.scss";
 
-const Carousel = ({ data, loading }) => {
+const Carousel = ({ data, loading, endpoint }) => {
     const carouselContainer = useRef()
     console.log(carouselContainer);
     const {url} = useSelector((state)=> state.home);
@@ -62,7 +62,7 @@ const Carousel = ({ data, loading }) => {
                                 return(
                                     <div key={item.id} 
                                         className="carouselItem" 
-                                        onClick={()=> navigate(`/${item.media_type}/${item.id}`)}>
+                                        onClick={()=> navigate(`/${item.media_type || endpoint}/${item.id}`)}>
                                         <div className="posterBlock">
                                             <ImgLazyLoad src={posterUrl} alt/>
                                             <CircleRating rating={item.vote_average.toFixed(1)}/>
