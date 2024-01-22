@@ -6,10 +6,10 @@ import dayjs from "dayjs";
 import "./style.scss";
 
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
-import useFetch from "../../../hooks/UseFetch";
+import useFetch from "../../../hooks/useFetch";
 import Genres from "../../../components/genres/Genres";
 import CircleRating from "../../../components/circleRating/CircleRating";
-import ImgLazyLoad from "../../../components/LazyloadImages/ImgLazyLoad";
+import ImgLazyLoad from "../../../components/lazyloadimages/ImgLazyLoad";
 import PosterFallback from "../../../assets/no-poster.png";
 import { PlayIcon } from "../../../components/playIcon/PlayIcon";
 import VideoPopup from "../../../components/videoPopup/VideoPopup";
