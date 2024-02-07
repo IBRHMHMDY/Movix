@@ -5,7 +5,7 @@ import "./style.scss";
 
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import avatar from "../../../assets/avatar.png";
-import ImgLazyLoad from "../../../components/lazyloadimages/ImgLazyLoad";
+import ImgLazyLoad from "../../../components/lazyLoadImages/LazyLoadImages";
 
 const Cast = ({ data, loading }) => {
     const { url } = useSelector((state) => state.home);

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import useFetch from "../../../hooks/useFetch";
-import ImgLazyLoad from "../../../components/lazyloadimages/ImgLazyLoad";
+import ImgLazyLoad from "../../../components/lazyLoadImages/LazyLoadImages";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 
 const HeroBanner = () => {

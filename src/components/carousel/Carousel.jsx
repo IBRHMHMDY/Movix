@@ -3,7 +3,7 @@ import { BsFillArrowLeftCircleFill,BsFillArrowRightCircleFill } from "react-icon
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
-import ImgLazyLoad from "../LazyloadImages/ImgLazyLoad";
+import ImgLazyLoad from "../lazyloadImages/LazyLoadImages";
 import CircleRating from "../circleRating/CircleRating";
 import Genres from "../genres/Genres";
 import dayjs from "dayjs";
