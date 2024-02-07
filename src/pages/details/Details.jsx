@@ -3,7 +3,7 @@ import DetailsBanner from './detailsBanner/DetailsBanner';
 import useFetch from '../../hooks/useFetch';
 import Cast from './cast/Cast';
 import Videos from './videos/Videos';
-import Similar from './carousel/similar';
+import Similar from './carousel/Similar';
 {/* Recommendations Not Working from API */}
 import Recommendation from './carousel/Recommendation';
 
